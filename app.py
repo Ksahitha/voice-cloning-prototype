@@ -34,4 +34,4 @@ interface=gr.Interface(
 
 )
 
-interface.launch()
+interface.launch(share=True)
