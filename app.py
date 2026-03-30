@@ -61,7 +61,6 @@ with gr.Blocks() as app:
                 audio=gr.Audio(
 
                     type="filepath",
-
                     label="Upload Voice Sample"
 
                 )
@@ -69,9 +68,7 @@ with gr.Blocks() as app:
                 text=gr.Textbox(
 
                     label="Text to generate",
-
                     placeholder="Enter text here",
-
                     lines=5
 
                 )
@@ -100,13 +97,11 @@ with gr.Blocks() as app:
             status=gr.Textbox(
 
                 label="System Status"
-
             )
 
             example.click(
 
                 example_text,
-
                 outputs=text
 
             )
@@ -114,9 +109,7 @@ with gr.Blocks() as app:
             generate.click(
 
                 clone,
-
                 inputs=[audio,text],
-
                 outputs=[output_audio,status,download]
 
             )
