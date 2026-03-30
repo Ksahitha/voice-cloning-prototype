@@ -46,5 +46,6 @@ interface=gr.Interface(
 Upload a voice sample and enter text.
 The system clones the speaker voice and generates new speech.
 """
+)
 
 interface.launch(share=True)
