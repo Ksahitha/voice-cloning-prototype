@@ -25,13 +25,26 @@ interface=gr.Interface(
 
     inputs=[
 
-        gr.Audio(type="filepath"),
-        gr.Textbox(label="Enter text")
+        gr.Audio(
+            type="filepath",
+            label="Upload voice sample"
+        ),
+
+        gr.Textbox(
+            label="Text to synthesize"
+        )
 
     ],
 
-    outputs=gr.Audio()
+    outputs=gr.Audio(
+        label="Generated speech"
+    ),
 
-)
+    title="AI Voice Cloning Prototype",
+
+    description="""
+Upload a voice sample and enter text.
+The system clones the speaker voice and generates new speech.
+"""
 
 interface.launch(share=True)
